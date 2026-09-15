@@ -9,17 +9,22 @@
 #o Escaleno: Se todos os lados forem diferentes.
 #III. Se a primeira validação for falsa, o programa deve exibir: "Os valores não podem formar um triângulo!"
 
-ladoA = int(input("Digite o valor do lado A: "));
+ladoA = int(input("Digite o valor do lado A: "))
 
-ladoB = int(input("Digite o valor do lado B: "));
+ladoB = int(input("Digite o valor do lado B: "))
 
-ladoC = int(input("Digite o valor do lado C: "));
-
+ladoC = int(input("Digite o valor do lado C: "))
 
 if (ladoA + ladoB > ladoC) and (ladoA + ladoC > ladoB) and (ladoB + ladoC > ladoA):
-    if (ladoA == ladoB and ladoB == ladoC):
-        print("O triangulo é um Equilátero. ");
-    elif (ladoA == ladoB or ladoB == ladoC or ladoA == ladoC):
-        print("O triangulo é um Isósceles. ");
+
+    if ladoA == ladoB and ladoB == ladoC:
+        print("O triângulo é um Equilátero.")
+
+    elif ladoA == ladoB or ladoB == ladoC or ladoA == ladoC:
+        print("O triângulo é um Isósceles.")
+
     else:
-        print("Os valores formaram um triangulo Escaleno ");
+        print("O triângulo é um Escaleno.")
+
+else:
+    print("Os valores não podem formar um triângulo!")
